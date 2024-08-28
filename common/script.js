@@ -1,4 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+
+  forgotPasswordForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const email = document.getElementById('forgotEmail').value;
+
+    if (email) {
+      // Implement the logic for sending the password reset link.
+      // This might involve sending the email to your server or API endpoint.
+
+      // For now, just log the email to the console
+      console.log('Password reset link sent to:', email);
+
+      // Show a success message or redirect to another page
+      alert('A password reset link has been sent to your email address.');
+
+      // Close the modal after submission
+      const modal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
+      modal.hide();
+    } else {
+      alert('Please enter a valid email address.');
+    }
+  });
+
   const showSignUpLink = document.getElementById('showSignUpLink');
   const showSignInLink = document.getElementById('showSignInLink');
   const signInForm = document.getElementById('signInForm');
