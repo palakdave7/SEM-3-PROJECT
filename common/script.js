@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+<<<<<<< HEAD
+=======
 
   const forgotPasswordForm = document.getElementById('forgotPasswordForm');
 
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+>>>>>>> 38be2299af3d398846fca9d62c10bb73a3dcbeb4
   const showSignUpLink = document.getElementById('showSignUpLink');
   const showSignInLink = document.getElementById('showSignInLink');
   const signInForm = document.getElementById('signInForm');
