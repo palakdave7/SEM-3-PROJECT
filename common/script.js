@@ -1,33 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-<<<<<<< HEAD
-=======
-
-  const forgotPasswordForm = document.getElementById('forgotPasswordForm');
-
-  forgotPasswordForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    const email = document.getElementById('forgotEmail').value;
-
-    if (email) {
-      // Implement the logic for sending the password reset link.
-      // This might involve sending the email to your server or API endpoint.
-
-      // For now, just log the email to the console
-      console.log('Password reset link sent to:', email);
-
-      // Show a success message or redirect to another page
-      alert('A password reset link has been sent to your email address.');
-
-      // Close the modal after submission
-      const modal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
-      modal.hide();
-    } else {
-      alert('Please enter a valid email address.');
-    }
-  });
-
->>>>>>> 38be2299af3d398846fca9d62c10bb73a3dcbeb4
   const showSignUpLink = document.getElementById('showSignUpLink');
   const showSignInLink = document.getElementById('showSignInLink');
   const signInForm = document.getElementById('signInForm');
@@ -114,3 +85,73 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Slider 1
+  let next1 = document.querySelector('.home-popular-tours .slider-next');
+  let prev1 = document.querySelector('.home-popular-tours .slider-prev');
+  let slideContainer1 = document.querySelector('.home-popular-tours .slide-tour');
+
+  function moveSlide1(direction) {
+      let items1 = document.querySelectorAll('.home-popular-tours .item-tour');
+
+      if (direction === 'next') {
+          slideContainer1.appendChild(items1[0]); // Move the first item to the end
+      } else if (direction === 'prev') {
+          slideContainer1.prepend(items1[items1.length - 1]); // Move the last item to the beginning
+      }
+  }
+
+  next1.addEventListener('click', function() {
+      moveSlide1('next');
+  });
+
+  prev1.addEventListener('click', function() {
+      moveSlide1('prev');
+  });
+
+  // Slider 2
+  let next2 = document.querySelector('.home-popular-tours-duplicate .slider2-next');
+  let prev2 = document.querySelector('.home-popular-tours-duplicate .slider2-prev');
+  let slideContainer2 = document.querySelector('.home-popular-tours-duplicate .slide-tour');
+
+  function moveSlide2(direction) {
+      let items2 = document.querySelectorAll('.home-popular-tours-duplicate .item-tour');
+
+      if (direction === 'next') {
+          slideContainer2.appendChild(items2[0]); // Move the first item to the end
+      } else if (direction === 'prev') {
+          slideContainer2.prepend(items2[items2.length - 1]); // Move the last item to the beginning
+      }
+  }
+
+  next2.addEventListener('click', function() {
+      moveSlide2('next');
+  });
+
+  prev2.addEventListener('click', function() {
+      moveSlide2('prev');
+  });
+
+  // Slider 3
+  let next3 = document.querySelector('.home-popular-tours-duplicate2 .slider3-next');
+  let prev3 = document.querySelector('.home-popular-tours-duplicate2 .slider3-prev');
+  let slideContainer3 = document.querySelector('.home-popular-tours-duplicate2 .slide-tour');
+
+  function moveSlide3(direction) {
+      let items3 = document.querySelectorAll('.home-popular-tours-duplicate2 .item-tour');
+
+      if (direction === 'next') {
+          slideContainer3.appendChild(items3[0]); // Move the first item to the end
+      } else if (direction === 'prev') {
+          slideContainer3.prepend(items3[items3.length - 1]); // Move the last item to the beginning
+      }
+  }
+
+  next3.addEventListener('click', function() {
+      moveSlide3('next');
+  });
+
+  prev3.addEventListener('click', function() {
+      moveSlide3('prev');
+  });
+});
